@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Gymtastic</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="carousel.css" />
+  </head>
+  <body>
+    <div id="page-container">
+      <div id="content-wrap">
+        <div class="navbar">
+          <ul>
+            <li>
+              <a
+                href="./home.html"
+                style="font-weight: bold; font-size: 18px"
+              >
+                Gymtastic
+              </a>
+            </li>
+            <li><a href="./home.html">Home</a></li>
+            <li><a href="./about-us.html">About Us</a></li>
+            <li><a href="#contact-us">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="content">
+          <h1>About Us</h1>
+          <section>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Ipsa odit sapiente odio modi, saepe officiis mollitia
+              placeat tempora! Minima at, eaque natus alias omnis
+              eligendi iure quia reiciendis unde velit. Lorem ipsum
+              dolor sit amet consectetur adipisicing elit. Vel dolore
+              quia, quos molestiae aliquam pariatur laboriosam,
+              dolorum perspiciatis beatae blanditiis dignissimos.
+              Labore architecto aspernatur fugiat ullam a maiores
+              error obcaecati? Lorem, ipsum dolor sit amet consectetur
+              adipisicing elit. Recusandae reprehenderit laudantium,
+              labore facere culpa magnam! Alias aperiam molestias
+              officiis nulla dolores adipisci. Vitae dolores iure
+              accusantium odio, quam assumenda a?
+            </p>
+          </section>
+        </div>
+        <div>
+          <h1 style="margin-left: 20px">Our Gyms</h1>
+          <section>
+            <div class="carousel">
+              <div class="card-container">
+                <div class="card">
+                  <h2>London</h2>
+                  <p>📍 Westminster</p>
+                  <p>Open 24 hours</p>
+                </div>
+                <div class="card">
+                  <h2>Cardiff</h2>
+                  <p>📍 Splott</p>
+                  <p>Open 24 hours</p>
+                </div>
+                <div class="card">
+                  <h2>Glasgow</h2>
+                  <p>📍 Govanhill</p>
+                  <p>Open 24 hours</p>
+                </div>
+                <div class="card">
+                  <h2>London</h2>
+                  <p>📍 Camden</p>
+                  <p>Open 24 hours</p>
+                </div>
+                <div class="card">
+                  <h2>London</h2>
+                  <p>📍 Leicester Square</p>
+                  <p>Open 24 hours</p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+      <footer id="footer">
+        <p class="footer-heading">Popular Features</p>
+        <p class="footer-text">Gyms Near Me</p>
+        <div class="footer-list">
+          <p>Gyms in London</p>
+          <p>Gyms in Cardiff</p>
+          <p>Gyms in Glasgow</p>
+        </div>
+        <p class="footer-text">Fitness Classes</p>
+        <p class="footer-text">Personal Trainers</p>
+        <p class="footer-text">Gym Membership Deals & Offers</p>
+      </footer>
+    </div>
+    <script>
+      const listOfCardElements = document.querySelectorAll('.card')
+      const cardContainer = document.querySelector('.card-container')
+
+      listOfCardElements.forEach((cardElement, index) => {
+        cardElement.addEventListener('click', () => {
+          const scrollLeft = index * listOfCardElements[0].offsetWidth
+          cardContainer.scrollTo({
+            left: scrollLeft,
+            behavior: 'smooth',
+          })
+        })
+      })
+    </script>
+  </body>
+</html>
